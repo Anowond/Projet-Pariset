@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./scripts/burger.js" defer></script>
+    <script type="module" src="./scripts/main.js" defer></script>
+    <link rel="stylesheet" href="./styles/inscription.css">
+    <title>Inscription</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="./index.html"><img src="./img/logo_home.jpeg"
+                alt="un logo d'un rhinocéros habillé d'une blouse de médecin" class="logo"></a>
+        <h2 class="title">Clinique Vétérinaire VétoRhino</h2>
+        <nav id="nav">
+            <ul>
+                <li><a href="./connexion.html">Connexion</a></li>
+                <li><a href="./inscription.html">Inscription</a></li>
+                <li><a href="#">page1</a></li>
+                <li><a href="#">page1</a></li>
+            </ul>
+            <div id="icons"></div>
+        </nav>
+    </header>
+    <section id="message">
+        <p>Bienvenue dans le formulaire d'inscription !<br />
+            Veuillez saisir les données suivantes pour vous inscrire :</p>
+    </section>
+    <section class="formulaire">
+        <form action="">
+            <p>Votre nom complet :</p>
+            <input type="text" name="name" id="registerInputName">
+            <p>Votre adresse mail :</p>
+            <input type="mail" name="mail" id="registerInputMail">
+            <p>Votre mot de passe :</p>
+            <input type="password" name="password" id="registerInputPassword">
+            <button id="registerButton">Envoyer</button>
+        </form>
+        <a href="./connexion.html">
+            <h2>Déja incrit ? Cliquez ici pour vous connecter 👈</h2>
+        </a>
+    </section>
+    <footer class="footer">
+        <h2>Contact</h2>
+        <h3>Adresse 🏠</h3>
+        <p>
+            Clinique Vétérinaire VétoRhino<br />
+            102 rue du Géneral Troufignol<br />
+            35684 Quirpouac
+        </p>
+        <h3>Téléphone 📞</h3>
+        <p>08 36 65 65 65</p>
+        <h3>Mail 📧</h3>
+        <p>clinique.vétorhino@outlook.fr</p>
+    </footer>
+</body>
+
+</html>
