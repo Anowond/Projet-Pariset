@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
-import { getAuth, createUserWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
 
 
 
@@ -74,14 +74,23 @@ const RecupererCollection = async () => {
 }
 
 // Connexion d'un utilisateur
-const ConnexionUtilisateur = async () => {
+const ConnexionUtilisateur = async (mail, password) => {
 
+    try {
 
+        const response = await signInWithEmailAndPassword(auth, mail, password)
+
+        console.log(response)
+
+    } catch (e) {
+        console.log(e)
+    }
 
 }
 
 export {
     AjouterUnUtilisateur,
     RecupererCollection,
-    AjoutAuthUser
+    AjoutAuthUser,
+    ConnexionUtilisateur
 }

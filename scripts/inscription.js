@@ -13,7 +13,7 @@ registerButton.addEventListener("click", async (e) => {
     e.preventDefault()
 
     // Test pour ne pas envoyer d'objets vides en BDD
-    if (trim(registerInputName.value) !== "" || trim(registerInputMail.value) !== "" || trim(registerInputPassword.value) !== "") {
+    if (registerInputName.value.trim() !== "" || registerInputMail.value.trim() !== "" || registerInputPassword.value.trim() !== "") {
 
         //Appel de la fonction AjouterDocument() et AjoutAuthuser() avec comme paramétres les valeurs des inputs
         AjouterUnUtilisateur(registerInputName.value, registerInputMail.value, registerInputPassword.value)
