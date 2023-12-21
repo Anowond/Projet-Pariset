@@ -1,6 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js"
 import { getFirestore, collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js"
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js'
 
 
 
@@ -43,7 +43,7 @@ const AjoutAuthUser = async (mail, password) => {
         .then((userCredentials) => {
 
             const user = userCredentials.user;
-            console.log(user)
+            //console.log(user)
 
         })
 
@@ -62,7 +62,11 @@ const RecupererCollection = async () => {
         const querySnapshot = await getDocs(collection(db, "users"));
 
         querySnapshot.forEach(docs => {
-            tableauDoc.push(docs.id, docs.data())
+            let object = {
+            }
+            object.id = docs.id
+            object.data = docs.data()
+            tableauDoc.push(object)
         });
         //console.log(tableauDoc)
 
@@ -80,7 +84,8 @@ const ConnexionUtilisateur = async (mail, password) => {
 
         const response = await signInWithEmailAndPassword(auth, mail, password)
 
-        console.log(response)
+        //console.log(response)
+        return response
 
     } catch (e) {
         console.log(e)
@@ -88,9 +93,21 @@ const ConnexionUtilisateur = async (mail, password) => {
 
 }
 
+// Mise à jour du profil utilisateur
+const updateUser = async (name) => {
+
+    await updateProfile(auth.currentUser, {
+        displayName: `${name}`
+    })
+
+    console.log(auth.currentUser.displayName)
+
+}
+
 export {
     AjouterUnUtilisateur,
     RecupererCollection,
     AjoutAuthUser,
-    ConnexionUtilisateur
+    ConnexionUtilisateur,
+    updateUser
 }
