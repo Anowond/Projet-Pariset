@@ -68,6 +68,16 @@ nav ul {
         background-color: #e3524a;
     }
 
+    #divUser {
+        text-align: center;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 10px;
+        font-family: Manrope;
+    }
+
     header img {
         height: 70px;
         width: 70px;
