@@ -3,6 +3,9 @@ import { ConnexionUtilisateur, RecupererCollection, updateUser } from "./fonctio
 let loginInputMail = document.getElementById("loginInputMail")
 let loginInputPassword = document.getElementById("loginInputPassword")
 let loginButton = document.getElementById("loginButton")
+let divUser = document.getElementById("divUser")
+let divUserCredentials = document.createElement("div")
+let divUserMessage = document.createElement("div")
 
 loginButton.addEventListener("click", async (e) => {
 
@@ -37,3 +40,12 @@ loginButton.addEventListener("click", async (e) => {
     loginInputMail.value = ""
     loginInputPassword.value = ""
 })
+
+// Peuplement des div du header avec les informations tirées du sessionStorage
+if (sessionStorage["userCredentials"]) {
+   let userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
+   divUserCredentials.textContent = userCredentials.user.displayName
+   divUserMessage.textContent = "Bienvenue"
+   divUser.appendChild(divUserMessage)
+   divUser.appendChild(divUserCredentials)
+}

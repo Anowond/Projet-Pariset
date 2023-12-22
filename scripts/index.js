@@ -10,7 +10,7 @@ let divUserMessage = document.createElement("div")
 divUserMessage.textContent = "Bienvenue"
 
 // Condition : Si la session n'est pas null, afficher le nom contenu dans la session
-if (userCredentials !== null) {
+if (sessionStorage["userCredentials"]) {
     divUser.appendChild(divUserMessage)
     divUserCredentials.textContent = userCredentials.user.displayName
     divUser.appendChild(divUserCredentials)

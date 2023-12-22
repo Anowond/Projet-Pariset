@@ -126,38 +126,24 @@ nav ul {
         right: 0%;
     }
 
-    /******/
-
-    #message {
-        margin: 30px 10px 10px 10px;
-        text-align: center;
+    main  {
+        flex-grow: 1;
     }
 
-    .formulaire {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        flex-grow: 1;
-        gap: 10px;
+    #mainT
+
+    main h2 {
+        font-family: Manrope;
+        font-size: 0.9em;
+        text-align: center;
         margin: 10px
     }
 
-    .formulaire form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 5px
-    }
 
-    .formulaire button {
-        width: 100px;
-    }
-
-    a h2 {
-        font-size: 0.8rem;
-        text-align: center;
-        margin-top: 10px;
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 100px);
+        grid-template-rows: repeat(2, 100px);
     }
 
     /* FOOTER */

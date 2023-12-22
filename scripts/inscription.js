@@ -5,6 +5,18 @@ let registerInputName = document.getElementById("registerInputName")
 let registerInputMail = document.getElementById("registerInputMail")
 let registerInputPassword = document.getElementById("registerInputPassword")
 let registerButton = document.getElementById("registerButton")
+let divUser = document.getElementById("divUser")
+let divUserCredentials = document.createElement("div")
+let divUserMessage = document.createElement("div")
+
+// Peuplement des div du header avec les informations tirées du sessionStorage
+if (sessionStorage["userCredentials"] ) {
+    let userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
+    divUserCredentials.textContent = userCredentials.user.displayName
+    divUserMessage.textContent = "Bienvenue"
+    divUser.appendChild(divUserMessage)
+    divUser.appendChild(divUserCredentials)
+ }
 
 // Ajout d'un utilisateur en base au clic sur le bouton "Envoyer"
 registerButton.addEventListener("click", async (e) => {

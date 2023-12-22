@@ -100,7 +100,7 @@ const updateUser = async (name) => {
         displayName: `${name}`
     })
 
-    console.log(auth.currentUser.displayName)
+    //console.log(auth.currentUser.displayName)
 
 }
 
