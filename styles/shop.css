@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
 
 }
@@ -86,6 +87,7 @@ nav ul {
     header img {
         height: 70px;
         width: 70px;
+        display: block;
     }
 
     header h2 {
@@ -126,29 +128,53 @@ nav ul {
         right: 0%;
     }
 
-    main  {
+    main {
         flex-grow: 1;
+        display: flex;
+        flex-direction: column;
     }
 
-    #mainT
+    #mainTitle {
+        text-align: center;
+    }
+
+    #mainGrid {
+        justify-self: center;
+        align-self: center;
+    }
+
+    .box img {
+        height: 100%;
+        width: 100%;
+        display: block;
+    }
 
     main h2 {
         font-family: Manrope;
-        font-size: 0.9em;
+        font-size: 1em;
         text-align: center;
-        margin: 10px
+        margin: 20px
     }
-
 
     .grid {
         display: grid;
-        grid-template-columns: repeat(2, 100px);
-        grid-template-rows: repeat(2, 100px);
+        grid-template-columns: repeat(2, 125px);
+        grid-template-rows: repeat(2, 125px);
+        gap: 25px;
+    }
+
+    .gridLegend {
+        text-align: center;
     }
 
     /* FOOTER */
     .footer h2 {
         text-align: center;
+    }
+
+    .footer p {
+        margin-left: 20px;
+        padding-top: 5px
     }
 
     .footer {

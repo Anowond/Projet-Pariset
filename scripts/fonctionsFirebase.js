@@ -19,7 +19,7 @@ const app = initializeApp(firebaseConfig)
 const db = getFirestore(app)
 const auth = getAuth()
 
-// Ajouter unutilisateur en base FireStore
+// Ajouter un utilisateur en base FireStore
 const AjouterUnUtilisateur = async (name, mail, password) => {
 
     try {
@@ -34,6 +34,24 @@ const AjouterUnUtilisateur = async (name, mail, password) => {
     } catch (e) {
         console.error("Erreur lors de l'ajout du document : ", e)
     }
+}
+
+// Ajouter un article dans la BDD (quel que soit la collection, ou la subcollection)
+const AjouterUnObjet = async (name, img, desc, price, coll) => {
+
+    try {
+        const docRef = await addDoc(collection(db, coll), {
+            name: name,
+            img: img,
+            desc: desc,
+            price: price
+        });
+        docRef.id = name
+        console.log("Document créé avec l'ID : " + docRef.id)
+    } catch (e) {
+        console.error("Erreur : ", e)
+    }
+
 }
 
 // Ajouter un utilisateur dans le Auth
@@ -109,5 +127,6 @@ export {
     RecupererCollection,
     AjoutAuthUser,
     ConnexionUtilisateur,
-    updateUser
+    updateUser,
+    AjouterUnObjet
 }

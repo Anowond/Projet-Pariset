@@ -1,4 +1,8 @@
 import { AjouterUnUtilisateur, RecupererCollection, AjoutAuthUser, ConnexionUtilisateur } from "./fonctionsFirebase.js"
+import getSession from "./getSession.js"
+
+// Récupération de la séssion utilisateur stockée dans le sessionStorage (si elle existe)
+getSession()
 
 // Importation des éléments HTML
 let registerInputName = document.getElementById("registerInputName")
@@ -9,14 +13,6 @@ let divUser = document.getElementById("divUser")
 let divUserCredentials = document.createElement("div")
 let divUserMessage = document.createElement("div")
 
-// Peuplement des div du header avec les informations tirées du sessionStorage
-if (sessionStorage["userCredentials"] ) {
-    let userCredentials = JSON.parse(sessionStorage.getItem("userCredentials"))
-    divUserCredentials.textContent = userCredentials.user.displayName
-    divUserMessage.textContent = "Bienvenue"
-    divUser.appendChild(divUserMessage)
-    divUser.appendChild(divUserCredentials)
- }
 
 // Ajout d'un utilisateur en base au clic sur le bouton "Envoyer"
 registerButton.addEventListener("click", async (e) => {

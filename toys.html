@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="./scripts/burger.js" defer></script>
+    <script type="module" src="./scripts/toys.js" defer></script>
+    <link rel="stylesheet" href="./styles/toys.css">
+    <title>Jouets</title>
+</head>
+
+<body>
+    <header class="header">
+        <a href="./index.html"><img src="./img/logo_home.jpeg"
+                alt="un logo d'un rhinocéros habillé d'une blouse de médecin" class="logo"></a>
+        <div id="divUser">
+        </div>
+        <nav id="nav">
+            <ul>
+                <li><a href="./connexion.html">Connexion</a></li>
+                <li><a href="./inscription.html">Inscription</a></li>
+                <li><a href="./shop.html">Boutique</a></li>
+                <li><a href="#">page1</a></li>
+            </ul>
+            <div id="icons"></div>
+        </nav>
+    </header>
+    <main>
+        <h2>Bienvenue dans la boutique de jouets, séléctionnez un nombre pour le produit désiré et cliquez sur le bouton
+            Ajouter pour l'ajouter à votre panier</h2>
+        <div class="grid">
+            <div id="productDiv0" class="gridDiv">
+                <div class="productDiv">
+                    <img src="./img/cat-toy.jpeg" alt="une souris en peluche pour chat">
+                    <p>Souris en peluche pour chat</p>
+                </div>
+                <div id="btnDiv0" class="btnDiv">
+                    <p class="productName">Souris en peluche</p>
+                    <p id="price0">5 €</p>
+                    <input id="inputQte0" type="number" value="0" min="0" class="inputQteToy">
+                    <button class="btnToy" id="btnToy0">Ajouter</button>
+                </div>
+            </div>
+            <div id="productDiv1" class="gridDiv">
+                <div class="productDiv">
+                    <img src="./img/dog-toy.jpeg" alt="un os en peluche pour chien">
+                    <p>Os en peluche pour chien</p>
+                </div>
+                <div id="btnDiv1" class="btnDiv">
+                    <p class="productName">Os en peluche</p>
+                    <p id="price1">8 €</p>
+                    <input id="inputQte1" type="number" value="0" min="0" class="inputQteToy">
+                    <button class="btnToy" id="btnToy1">Ajouter</button>
+                </div>
+            </div>
+            <div id="productDiv2" class="gridDiv">
+                <div class="productDiv">
+                    <img src="./img/cat-toy2.jpeg" alt="un jouet à plumes pour chat">
+                    <p>Jouet à plumes pour chat</p>
+                </div>
+                <div id="btnDiv2" class="btnDiv">
+                    <p class="productName">Jouet à plumes</p>
+                    <p id="price2">6 €</p>
+                    <input id="inputQte2" type="number" value="0" min="0" class="inputQteToy">
+                    <button class="btnToy" id="btnToy2">Ajouter</button>
+                </div>
+            </div>
+            <div id="productDiv3" class="gridDiv">
+                <div class="productDiv">
+                    <img src="./img/dog-toy2.jpeg" alt="un os en cahoutchouc pour chien">
+                    <p>Os en cahoutchouc pour chien</p>
+                </div>
+                <div id="btnDiv3" class="btnDiv">
+                    <p class="productName">Os en cahoutchouc</p>
+                    <p id="price3">10 €</p>
+                    <input id="inputQte3" type="number" value="0" min="0" class="inputQteToy">
+                    <button class="btnToy" id="btnToy3">Ajouter</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <h2>Contact</h2>
+        <h3>Adresse 🏠</h3>
+        <p>
+            Clinique Vétérinaire VétoRhino<br />
+            102 rue du Géneral Troufignol<br />
+            35684 Quirpouac
+        </p>
+        <h3>Téléphone 📞</h3>
+        <p>08 36 65 65 65</p>
+        <h3>Mail 📧</h3>
+        <p>clinique.vétorhino@outlook.fr</p>
+    </footer>
+</body>
+
+</html>

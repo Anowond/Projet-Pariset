@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    border: none;
     box-sizing: border-box;
 
 }
@@ -15,10 +16,10 @@
     src: url("../fonts/Manrope/Manrope-VariableFont_wght.ttf");
 }
 
+
 header img {
     height: 100px;
     width: 100px;
-    display: block;
 }
 
 /* NAVBAR */
@@ -60,6 +61,13 @@ nav ul {
         font-family: Montserrat;
     }
 
+    body {
+        display: flex;
+        flex-direction: column;
+        background-color: #36b2d1;
+        height: 800px;
+    }
+
     header {
         height: 70px;
         display: flex;
@@ -70,58 +78,21 @@ nav ul {
     }
 
     #divUser {
-        text-align: center;
-    }
-
-    h1 {
-        text-align: center;
-        margin-bottom: 10px;
-        font-family: Manrope;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
     }
 
     header img {
         height: 70px;
         width: 70px;
+        display: block;
     }
 
     header h2 {
         font-family: Manrope;
         font-size: 0.8em
-    }
-
-
-    body {
-        background-color: #36b2d1;
-    }
-
-    .home_content {
-        margin: 20px;
-        font-size: 0.9em;
-    }
-
-    .home_content p {
-        padding-top: 10px;
-    }
-
-    .service_content {
-        margin: 20px;
-        padding: 10px;
-        font-size: 0.9em
-    }
-
-    .service_content li,
-    p {
-        margin-left: 20px;
-        padding-top: 5px
-    }
-
-    h2 {
-        font-family: Manrope;
-    }
-
-    h3 {
-        font-family: Manrope;
-        margin-top: 5px;
     }
 
     /* NAVBAR BURGER */
@@ -157,21 +128,89 @@ nav ul {
         right: 0%;
     }
 
-    /******/
+    /*********/
+
+    main {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main h2 {
+        margin: 10px;
+        text-align: center;
+        font-size: 0.9em;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(auto);
+        margin: 10px;
+    }
+
+    .grid img {
+        height: 100px;
+        width: 100px;
+    }
+
+    .gridDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        margin: 10px;
+    }
+
+    .inputQteToy {
+        height: 25px;
+        width: 50px;
+        text-align: center;
+    }
+
+    .productDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .btnDiv {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .btnToy {
+        height: 50px;
+        width: 100px;
+        border-radius: 10px;
+        background-color: #34EB52;
+    }
 
     /* FOOTER */
     .footer h2 {
         text-align: center;
     }
 
-    
+    .footer p {
+        margin-left: 20px;
+        padding-top: 5px
+    }
 
     .footer {
         font-size: 0.8em;
-        margin-top: 20px;
         background-color: #e3524a;
         padding: 5px
     }
 
-    /*****/
+    /*********/
 }
