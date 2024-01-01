@@ -1,5 +1,9 @@
 import getSession from "./getSession.js"
-import { addToCart } from "./cart.js"
+import { addToCart, getCart, removeFromCart } from "./cart.js"
+
+window.getCart = getCart
+window.addToCart = addToCart
+window.removeFromCart = removeFromCart
 
 // Récupération de la séssion utilisateur stockée dans le sessionStorage (si elle existe)
 getSession()
@@ -51,12 +55,13 @@ for (let key in object) {
     // Attribution de l'objet à une variable
     let objet = object[key]
     // Test pour voir si tout le monde est la
-    if (objet.button && objet.price && objet.quantity) {
+    if (objet.button && objet.name && objet.price && objet.quantity) {
 
         objet.button.addEventListener("click", () => {
-            objet.total = objet.price * objet.quantity
+
             addToCart(objet)
-            console.log("OK", object[key])
+            location.reload()
         })
     }
 }
+

@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./scripts/burger.js" defer></script>
-    <script type="module" src="./scripts/connexion.js" defer></script>
-    <link rel="stylesheet" href="./styles/connexion.css">
-    <title>Connexion</title>
+    <script type="module" src="./scripts/basket.js" defer></script>
+    <script type="module" src="./scripts/burger.js" defer></script>
+    <script type="module" src="./scripts/cart.js"></script>
+    <link rel="stylesheet" href="./styles/basket.css">
+    <title>Panier</title>
 </head>
 
 <body>
@@ -21,23 +22,18 @@
                 <li><a href="./connexion.html">Connexion</a></li>
                 <li><a href="./inscription.html">Inscription</a></li>
                 <li><a href="./shop.html">Boutique</a></li>
-                <li><a href="./basket.html">Panier</a></li>
+                <li><a href="./basket.html">panier</a></li>
             </ul>
             <div id="icons"></div>
         </nav>
     </header>
-    <section class="formulaire">
-        <p>Veuillez vous identifier pour continuer :</p>
-        <form action="" id="login">
-            <p>Votre adressse mail :</p>
-            <input type="mail" id="loginInputMail">
-            <p>Votre mot de passe :</p>
-            <input type="password" id="loginInputPassword">
-            <button id="loginButton">Envoyer</button>
-        </form>
-        <h2><a href="./inscription.html">Pas de compte ? Cliquez 👉 ici 👈 pour en créer un !</a></h2>
-        <h2><a href="#">Nom d'utilisateur ou mot de passe perdu ? 🤔</a></h2>
-    </section>
+    <main>
+        <h2>Bienvenue dans votre panier, voici le récapitulatif de son contenu : </h2>
+        <section class="basket">
+
+        </section>
+        <button id="checkoutBtn">Valider mon panier</button>
+    </main>
     <footer class="footer">
         <h2>Contact</h2>
         <h3>Adresse 🏠</h3>
