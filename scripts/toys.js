@@ -50,6 +50,8 @@ quantities.forEach(quantity => {
     })
 })
 
+console.log(object)
+
 // Itération de l'objet et ajout de l'écouteur d'événements sur les boutons
 for (let key in object) {
     // Attribution de l'objet à une variable
@@ -58,7 +60,6 @@ for (let key in object) {
     if (objet.button && objet.name && objet.price && objet.quantity) {
 
         objet.button.addEventListener("click", () => {
-
             addToCart(objet)
             location.reload()
         })

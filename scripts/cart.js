@@ -55,7 +55,7 @@ function updateProductQte(product, quantity) {
     if (findProduct != undefined) {
         findProduct.quantity += quantity
         findProduct.total = findProduct.price * findProduct.quantity
-        if (findProduct.quantity < 0) {
+        if (findProduct.quantity <= 0) {
             removeFromCart(product)
         }
     } else {
